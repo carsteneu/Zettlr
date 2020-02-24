@@ -76,6 +76,10 @@ class ZettlrCon {
           if (itemsub.hasOwnProperty('type')) builtItemsub.type = itemsub.type
           if (itemsub.hasOwnProperty('role')) builtItemsub.role = itemsub.role
 
+          // Accelerators may be system specific for macOS
+          if (itemsub.hasOwnProperty('accelerator')) builtItemsub.accelerator = itemsub.accelerator
+
+
           let that = this
           if (itemsub.hasOwnProperty('command')) {
             builtItemsub.click = function (menuitem, focusedWindow) {
@@ -89,9 +93,9 @@ class ZettlrCon {
           //push subemnuitem
           submenubuild.push(builtItemsub)
         }
-        
+        console.log(submenubuild)
         //name of submenu
-        if (item.hasOwnProperty('label'))  sublabel = item.label
+        if (item.hasOwnProperty('label'))  sublabel =  trans(item.label)
 
         //push submenu into menu
         menu.push({

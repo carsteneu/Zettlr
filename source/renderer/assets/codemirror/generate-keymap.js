@@ -40,6 +40,12 @@ module.exports = function (editor) {
     keymap['Cmd-K'] = 'markdownLink'
     keymap['Cmd-I'] = 'markdownItalic'
     keymap['Cmd-B'] = 'markdownBold'
+    keymap['Cmd-1'] = 'markdownHeading1'
+    keymap['Cmd-2'] = 'markdownHeading2'
+    keymap['Cmd-3'] = 'markdownHeading3'
+    keymap['Cmd-4'] = 'markdownHeading4'
+    keymap['Cmd-5'] = 'markdownHeading5'
+    keymap['Cmd-6'] = 'markdownHeading6'
   } else {
     // Windows/Linux/other shortcuts
     keymap['Ctrl-F'] = false // Disable the internal search
@@ -55,6 +61,12 @@ module.exports = function (editor) {
     keymap['Ctrl-K'] = 'markdownLink'
     keymap['Ctrl-I'] = 'markdownItalic'
     keymap['Ctrl-B'] = 'markdownBold'
+    keymap['Ctrl-1'] = 'markdownHeading1'
+    keymap['Ctrl-2'] = 'markdownHeading2'
+    keymap['Ctrl-3'] = 'markdownHeading3'
+    keymap['Ctrl-4'] = 'markdownHeading4'
+    keymap['Ctrl-5'] = 'markdownHeading5'
+    keymap['Ctrl-6'] = 'markdownHeading6'
   }
 
   // Returns a CodeMirror keymap for the main editor, aware of potential settings.

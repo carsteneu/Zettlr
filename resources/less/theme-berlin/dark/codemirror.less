@@ -24,6 +24,15 @@
     &.cm-number     { color: var(--blue-3); }
 }
 
+  /* Make the formatting characters and escape sequences better visible 0.3 is to low in dark mode */
+  .cm-formatting-code,
+  .cm-formatting-code-block,
+  .cm-formatting-quote,
+  .cm-formatting-strong,
+  .cm-formatting-em,
+  .cm-zkn-link-formatting,
+  .cm-escape-char { opacity:.9; }
+
 // HTML tags
 .cm-tag       { color: var(--orange-2); }
 .cm-attribute { color: var(--blue-3); }

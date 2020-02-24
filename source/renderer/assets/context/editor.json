@@ -1,18 +1,66 @@
 [
+  
   {
-    "label": "menu.bold",
-    "accelerator": "CmdOrCtrl+B",
-    "command": "cm-command",
-    "content": "markdownBold"
+    "label": "menu.text_format",
+    "submenu": [
+      {
+        "label": "menu.bold",
+        "accelerator": "CmdOrCtrl+B",
+        "command": "cm-command",
+        "content": "markdownBold"
+      },    
+      { "label": "menu.italic",
+        "accelerator": "CmdOrCtrl+I",
+        "command": "cm-command",
+        "content": "markdownItalic"
+      },
+      {
+        "label": "gui.formatting.blockquote",
+        "command": "cm-command",
+        "content": "markdownBlockquote"
+      }
+    ]
   },
   {
-    "label": "menu.italic",
-    "accelerator": "CmdOrCtrl+I",
-    "command": "cm-command",
-    "content": "markdownItalic"
-  },
-  {
-    "type": "separator"
+    "label": "menu.headlines",
+    "submenu": [
+      {
+        "label": "menu.headline1",
+        "accelerator": "CmdOrCtrl+1",
+        "command": "cm-command",
+        "content": "markdownHeading1"
+      },    
+      {
+        "label": "menu.headline2",
+        "accelerator": "CmdOrCtrl+2",
+        "command": "cm-command",
+        "content": "markdownHeading2"
+      }, 
+      {
+        "label": "menu.headline3",
+        "accelerator": "CmdOrCtrl+3",
+        "command": "cm-command",
+        "content": "markdownHeading3"
+      }, 
+      {
+        "label": "menu.headline4",
+        "accelerator": "CmdOrCtrl+4",
+        "command": "cm-command",
+        "content": "markdownHeading4"
+      }, 
+      {
+        "label": "menu.headline5",
+        "accelerator": "CmdOrCtrl+5",
+        "command": "cm-command",
+        "content": "markdownHeading5"
+      },
+      {
+        "label": "menu.headline6",
+        "accelerator": "CmdOrCtrl+6",
+        "command": "cm-command",
+        "content": "markdownHeading6"
+      } 
+    ]
   },
   {
     "label": "menu.insert_link",
@@ -36,11 +84,7 @@
     "command": "cm-command",
     "content": "markdownMakeTaskList"
   },
-  {
-    "label": "gui.formatting.blockquote",
-    "command": "cm-command",
-    "content": "markdownBlockquote"
-  },
+  
   {
     "label": "gui.formatting.insert_table",
     "command": "cm-command",
