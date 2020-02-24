@@ -153,33 +153,6 @@ class ZettlrCon {
     return menu
   }
 
-    // As a last check, let's see if debug mode is on. If so, add the "Inspect
-    // element" menu item.
-    if (global.config.get('debug')) {
-      menu.push({ 'type': 'separator' })
-      menu.push({
-        label: 'Inspect Element',
-        click: () => {
-          require('electron').remote.getCurrentWindow().inspectElement(this._pos.x, this._pos.y)
-        }
-      })
-    }
-
-    if (scopes.includes('editor') && attributeKeys.includes('data-citekeys')) {
-      let keys = attributes[attributeKeys.indexOf('data-citekeys')].value.split(',')
-      // Add menu items for all cite keys to open the corresponding PDFs
-      menu.push({ 'type': 'separator' })
-      menu.push({
-        label: trans('menu.open_attachment'),
-        // The following line is an hommage to Python developers, a language
-        // whose sole purpose is to stuff as much code into one single line as possible.
-        submenu: keys.map(elem => { return { label: elem, click: () => { global.ipc.send('open-attachment', { 'citekey': elem }) } } })
-      })
-    }
-
-    return menu
-  }
-
   /**
     * Build the context menu.
     * @param  {Event} event The JavaScript event containing information for the menu
