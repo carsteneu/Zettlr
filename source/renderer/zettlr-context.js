@@ -59,13 +59,53 @@ class ZettlrCon {
       if (item.hasOwnProperty('scope') && !scopes.includes(item.scope)) continue
       // If an item is scoped by attribute and the attribute is not included, continue.
       if (item.hasOwnProperty('attribute') && !attributes.find(elem => elem.name === item.attribute)) continue
+
+      //init div vars
       let builtItem = {}
+      let sublabel = ""
+      let submenubuild = []
+
+       // Enable submenu 
+      if (item.hasOwnProperty('submenu')) 
+      {
+        //iterate subemnu items
+        for (let itemsub of item.submenu) {
+          let builtItemsub = {}
+
+          if (itemsub.hasOwnProperty('label')) builtItemsub.label = trans(itemsub.label)
+          if (itemsub.hasOwnProperty('type')) builtItemsub.type = itemsub.type
+          if (itemsub.hasOwnProperty('role')) builtItemsub.role = itemsub.role
+
+          let that = this
+          if (itemsub.hasOwnProperty('command')) {
+            builtItemsub.click = function (menuitem, focusedWindow) {
+              let content = (itemsub.hasOwnProperty('content')) ? itemsub.content : { 'hash': hash }
+              if (vdhash) content.virtualdir = vdhash
+               // Set the content to the attribute's value, if given
+              if (itemsub.hasOwnProperty('attribute')) content = attributes.find(elem => elem.name === itemsub.attribute).value
+              that._body.getRenderer().handleEvent(itemsub.command, content)
+            }
+          }
+          //push subemnuitem
+          submenubuild.push(builtItemsub)
+        }
+        
+        //name of submenu
+        if (item.hasOwnProperty('label'))  sublabel = item.label
+
+        //push submenu into menu
+        menu.push({
+          label: sublabel,
+          submenu:  submenubuild,
+        })
+        //go to next item
+        continue
+      }
+
       // Simple copying of trivial attributes
       if (item.hasOwnProperty('label')) builtItem.label = trans(item.label)
       if (item.hasOwnProperty('type')) builtItem.type = item.type
       if (item.hasOwnProperty('role')) builtItem.role = item.role
-
-      // Higher-order attributes
 
       // Accelerators may be system specific for macOS
       if (item.hasOwnProperty('accelerator')) builtItem.accelerator = item.accelerator
@@ -81,9 +121,37 @@ class ZettlrCon {
           that._body.getRenderer().handleEvent(item.command, content)
         }
       }
-      // Finally append the menu item
+
+      // Finally append the menu item withs subs...
       menu.push(builtItem)
     }
+
+    // As a last check, let's see if debug mode is on. If so, add the "Inspect
+    // element" menu item.
+    if (global.config.get('debug')) {
+      menu.push({ 'type': 'separator' })
+      menu.push({
+        label: 'Inspect Element',
+        click: () => {
+          require('electron').remote.getCurrentWindow().inspectElement(this._pos.x, this._pos.y)
+        }
+      })
+    }
+
+    if (scopes.includes('editor') && attributeKeys.includes('data-citekeys')) {
+      let keys = attributes[attributeKeys.indexOf('data-citekeys')].value.split(',')
+      // Add menu items for all cite keys to open the corresponding PDFs
+      menu.push({ 'type': 'separator' })
+      menu.push({
+        label: trans('menu.open_attachment'),
+        // The following line is an hommage to Python developers, a language
+        // whose sole purpose is to stuff as much code into one single line as possible.
+        submenu: keys.map(elem => { return { label: elem, click: () => { global.ipc.send('open-attachment', { 'citekey': elem }) } } })
+      })
+    }
+
+    return menu
+  }
 
     // As a last check, let's see if debug mode is on. If so, add the "Inspect
     // element" menu item.
