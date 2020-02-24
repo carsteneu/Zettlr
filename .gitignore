@@ -13,3 +13,6 @@ yarn.log
 
 # Don't commit ESLint error reports
 eslint_report.htm
+
+#package data - may be dynamic..
+package-lock.json
