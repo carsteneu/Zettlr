@@ -224,6 +224,13 @@ const { clipboard } = require('electron');
     markdownInline(cm, italicChars, italicChars, 'em')
   }
 
+   // The same for strikethrough
+   CodeMirror.commands.markdownStrikeThrough = function (cm) {
+    if (cm.getOption('disableInput')) return CodeMirror.Pass
+    let delChars = cm.getOption('markdownStrikeThroughFormatting')
+    markdownInline(cm, delChars, delChars, 'del')
+  }
+
   // Code blocks
   CodeMirror.commands.markdownCode = function (cm) {
     if (cm.getOption('disableInput')) return CodeMirror.Pass

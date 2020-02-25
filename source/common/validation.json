@@ -23,6 +23,7 @@
    "title": "required|string|default:",
    "editor.indentUnit": "required|number|min:1|max:24",
    "editor.boldFormatting": "required|string|in:__,**|default:**",
+   "editor.StrikeThroughFormatting":"required|string|in:~~|default:~~",
    "editor.italicFormatting": "required|string|in:_,*|default:_",
    "editor.readabilityAlgorithm": "required|string|in:dale-chall,gunning-fog,coleman-liau,automated-readability|default:dale-chall",
    "pdf.author": "required|string|default:",

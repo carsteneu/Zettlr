@@ -197,6 +197,7 @@ class ZettlrEditor {
       markdownImageBasePath: '', // The base path used to render the image in case of relative URLs
       markdownBoldFormatting: '**', // The characters used for bold
       markdownItalicFormatting: '_', // The characters used for italic
+      markdownStrikeThroughFormatting: '~~', // The characters used for strikethrough
       markdownOnLinkOpen: (url) => { return openMarkdownLink(url, this) }, // Action for ALT-Clicks
       zkn: {
         idRE: '(\\d{14})', // What do the IDs look like?
@@ -676,9 +677,11 @@ class ZettlrEditor {
     // Set indent unit
     this._cm.setOption('indentUnit', global.config.get('editor.indentUnit'))
 
-    // Set the bold and italic formatting characters
+    // Set the bold and italic and strikethrough formatting characters
     this._cm.setOption('markdownBoldFormatting', global.config.get('editor.boldFormatting'))
     this._cm.setOption('markdownItalicFormatting', global.config.get('editor.italicFormatting'))
+    this._cm.setOption('markdownStrikeThroughFormatting', global.config.get('editor.StrikeThroughFormatting'))
+    
 
     // Set the preview options
     this._renderCitations = global.config.get('display.renderCitations')

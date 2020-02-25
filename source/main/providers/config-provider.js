@@ -161,6 +161,7 @@ class ConfigProvider extends EventEmitter {
         'countChars': false, // Set to true to enable counting characters instead of words
         'boldFormatting': '**', // Can be ** or __
         'italicFormatting': '_', // Can be * or _
+        'StrikeThroughFormatting': '~~',
         'readabilityAlgorithm': 'dale-chall', // The algorithm to use with readability mode.
         'autoCorrect': {
           'active': true, // AutoCorrect is on by default

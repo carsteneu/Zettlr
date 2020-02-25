@@ -512,6 +512,7 @@
         "speech": "Speech",
         "start_speaking": "Start speaking",
         "stop_speaking": "Stop speaking",
+        "strikethrough": "Strikethrough",
         "tags": "Manage Tags\u2026",
         "text_format": "text formatting",
         "toggle_attachments": "View attachments",

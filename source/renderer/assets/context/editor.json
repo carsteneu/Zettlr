@@ -13,6 +13,11 @@
         "accelerator": "CmdOrCtrl+I",
         "command": "cm-command",
         "content": "markdownItalic"
+      }, 
+      {
+       "label": "menu.strikethrough",
+        "command": "cm-command",
+        "content": "markdownStrikeThrough"
       },
       {
         "label": "gui.formatting.blockquote",
