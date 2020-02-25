@@ -23,6 +23,16 @@
         "label": "gui.formatting.blockquote",
         "command": "cm-command",
         "content": "markdownBlockquote"
+      },
+      {
+        "label": "gui.formatting.code",
+        "command": "cm-command",
+        "content": "markdownCode"
+      },
+      {
+        "label": "gui.formatting.comment",
+        "command": "cm-command",
+        "content": "markdownComment"
       }
     ]
   },
@@ -68,32 +78,59 @@
     ]
   },
   {
+    "label": "menu.listen",
+    "submenu": [
+      {
+        "label": "menu.insert_ol",
+        "command": "cm-command",
+        "content": "markdownMakeOrderedList"
+      },
+      {
+        "label": "menu.insert_ul",
+        "command": "cm-command",
+        "content": "markdownMakeUnorderedList"
+      },
+      {
+        "label": "menu.insert_tasklist",
+        "accelerator": "CmdOrCtrl+T",
+        "command": "cm-command",
+        "content": "markdownMakeTaskList"
+      }   
+    ]
+  },
+  {
+    "type": "separator"
+  },
+  {
     "label": "menu.insert_link",
     "accelerator": "CmdOrCtrl+K",
     "command": "cm-command",
     "content": "markdownLink"
-  },
+  },  
   {
-    "label": "menu.insert_ol",
+    "label": "gui.formatting.image",
     "command": "cm-command",
-    "content": "markdownMakeOrderedList"
-  },
-  {
-    "label": "menu.insert_ul",
-    "command": "cm-command",
-    "content": "markdownMakeUnorderedList"
-  },
-  {
-    "label": "menu.insert_tasklist",
-    "accelerator": "CmdOrCtrl+T",
-    "command": "cm-command",
-    "content": "markdownMakeTaskList"
-  },
-  
+    "content": "markdownImage"
+  },  
   {
     "label": "gui.formatting.insert_table",
     "command": "cm-command",
     "content": "markdownInsertTable"
+  },
+  {
+    "label": "gui.formatting.divider",
+    "command": "cm-command",
+    "content": "markdownDivider"
+  },
+  {
+    "label": "gui.formatting.footnote",
+    "command": "cm-command",
+    "content": "insertFootnote"
+  },
+  {
+    "label": "gui.formatting.remove_footnote",
+    "command": "cm-command",
+    "content": "removeFootnote"
   },
   {
     "type": "separator"
