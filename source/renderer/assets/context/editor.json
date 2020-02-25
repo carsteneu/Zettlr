@@ -99,38 +99,50 @@
     ]
   },
   {
+    "label": "menu.insert",
+    "submenu": [
+      {
+        "label": "menu.insert_link",
+        "accelerator": "CmdOrCtrl+K",
+        "command": "cm-command",
+        "content": "markdownLink"
+      },  
+      {
+        "label": "gui.formatting.image",
+        "command": "cm-command",
+        "content": "markdownImage"
+      },  
+      {
+        "label": "gui.formatting.insert_table",
+        "command": "cm-command",
+        "content": "markdownInsertTable"
+      },
+      {
+        "label": "gui.formatting.divider",
+        "command": "cm-command",
+        "content": "markdownDivider"
+      },
+      {
+        "label": "gui.formatting.footnote",
+        "command": "cm-command",
+        "content": "insertFootnote"
+      }
+    ]
+  },
+  {
     "type": "separator"
-  },
-  {
-    "label": "menu.insert_link",
-    "accelerator": "CmdOrCtrl+K",
-    "command": "cm-command",
-    "content": "markdownLink"
-  },  
-  {
-    "label": "gui.formatting.image",
-    "command": "cm-command",
-    "content": "markdownImage"
-  },  
-  {
-    "label": "gui.formatting.insert_table",
-    "command": "cm-command",
-    "content": "markdownInsertTable"
-  },
-  {
-    "label": "gui.formatting.divider",
-    "command": "cm-command",
-    "content": "markdownDivider"
-  },
-  {
-    "label": "gui.formatting.footnote",
-    "command": "cm-command",
-    "content": "insertFootnote"
   },
   {
     "label": "gui.formatting.remove_footnote",
     "command": "cm-command",
     "content": "removeFootnote"
+  },
+  {
+    "type": "separator"
+  },
+  {
+    "label": "toolbar.readability",
+    "command": "toggle-readability"
   },
   {
     "type": "separator"
