@@ -93,7 +93,7 @@ class ZettlrCon {
           //push subemnuitem
           submenubuild.push(builtItemsub)
         }
-        console.log(submenubuild)
+        //console.log(submenubuild)
         //name of submenu
         if (item.hasOwnProperty('label'))  sublabel =  trans(item.label)
 
