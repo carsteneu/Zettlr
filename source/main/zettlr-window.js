@@ -90,7 +90,7 @@ class ZettlrWindow {
 
     // Remove the frame on Linux and Windows
     if (process.platform === 'linux' || process.platform === 'win32') {
-      winConf.frame = false
+      winConf.frame = true
     }
 
     // First create a new browserWindow
