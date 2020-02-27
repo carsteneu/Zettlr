@@ -1,28 +1,6 @@
 {
     "toolbar": [
         {
-          "role": "button",
-          "class": "menu-popup",
-          "context": [ "win32", "linux" ],
-          "command": "win-menu",
-          "content": "{ 'x': 15, 'y': 15 }",
-          "title": "toolbar.show_menu"
-        },
-        {
-            "role": "button",
-            "class": "dir-open",
-            "command": "dir-open",
-            "content": "{}",
-            "title": "toolbar.dir_open"
-        },
-        {
-            "role": "button",
-            "class":  "file-new",
-            "command": "file-new",
-            "content": "{}",
-            "title": "toolbar.file_new"
-        },
-        {
             "role": "button",
             "class": "stats",
             "command": "show-stats",

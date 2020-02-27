@@ -391,6 +391,7 @@
         "empty_dir": "Leeres Verzeichnis",
         "empty_directories": "Keine offenen Dateien oder Ordner",
         "file_chars": "Zeichen",
+        "file_chars_count": "%s Zeichen",
         "file_chars_sel": "Zeichen (Auswahl)",
         "file_chars_wo_spaces": "Zeichen (ohne Leer)",
         "file_words": "W\u00f6rter",

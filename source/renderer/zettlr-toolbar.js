@@ -193,7 +193,9 @@ class ZettlrToolbar {
     if (this._lastFileInfo.words === 0) return this.hideWordCount()
 
     if (this._fileInfoMode === 'words') {
-      this._fileInfo.text(trans('gui.words', localiseNumber(this._lastFileInfo.words)))
+      let fileInfoData      = trans('gui.words',      localiseNumber(this._lastFileInfo.words))
+      let fileInfoDatachx   = trans('gui.file_chars_count', localiseNumber(this._lastFileInfo.chars))
+      this._fileInfo.text(fileInfoData+" "+fileInfoDatachx)
     } else if (this._fileInfoMode === 'cursor') {
       this._fileInfo.text(`${this._lastFileInfo.cursor.line}:${this._lastFileInfo.cursor.ch}`)
     }
