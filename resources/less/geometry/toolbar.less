@@ -1,14 +1,15 @@
 // This file holds all geometry for the Zettlr toolbar
 
 #toolbar {
-    position: absolute;
-    top:0;
+    position: static;
+    bottom:0;
     left:0;
     width:100%;
     height:@toolbar-height;
     padding:0;
     display:flex;
     align-items:center;
+    margin-top:-@toolbar-height;
 
     // We don't have window chrome, so we need the toolbar to be draggable.
     -webkit-app-region: drag;
@@ -119,5 +120,5 @@ body.darwin #toolbar {
 
 // For Windows and Linux the same, only on the other side
 body.win32 #toolbar, body.linux #toolbar {
-  padding-right: 140px; // Windows window controls are ... huge.
+  padding-right: 0px; // Windows window controls are ... huge.
 }

@@ -14,12 +14,13 @@
 
 #editor {
   position:fixed;
-  top:@toolbar-height;
+  top:0;
   right:0;
   bottom:0;
   left: calc(20% + 10px);
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: hidden;
+  height:100%;
 
   &.fullscreen { left: 0%; padding-left: 0px; }
 
@@ -53,6 +54,9 @@
       cursor:text;
       font-family: inherit;
       margin-left: 0.5em;
+      margin-bottom:@toolbar-height;
+      margin-top:-@toolbar-height;
+      padding-top:@toolbar-height;
 
       @media(min-width: 1025px) { margin-left: @editor-margin-normal-lg; }
       @media(max-width: 1024px) { margin-left: @editor-margin-normal-md; }
@@ -86,7 +90,7 @@
   // CodeMirror fullscreen
   .CodeMirror-fullscreen {
     position: fixed !important; // Have to override another relative
-    top: @toolbar-height; left: 0; right: 0; bottom: 0;
+    top: 0; left: 0; right: 0; bottom: 0;
     height: auto;
     z-index: 500;
 
