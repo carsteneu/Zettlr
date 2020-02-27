@@ -71,8 +71,7 @@
       "label": "menu.delete_dir",
       "accelerator": { "darwin": "Cmd+Shift+Backspace", "other": "Ctrl+Delete" },
       "command": "dir-delete"
-    },
-    { "mixin": "other_prefs" }
+    }
   ]},
   "edit": {
     "label": "menu.labels.edit",
@@ -175,6 +174,33 @@
       "role": "close"
     },
     { "label": "menu.all_front", "role": "front" }
+  ]},
+  "settings": {
+    "label": "menu.labels.settings",
+    "submenu": [
+      {
+      "label": "menu.preferences",
+      "accelerator": "CmdOrCtrl+,",
+      "command": "open-preferences"
+      }, 
+      {
+        "label": "menu.pdf_preferences",
+        "accelerator": "CmdOrCtrl+Alt+,",
+        "command": "open-pdf-preferences"
+      },
+      { 
+        "label": "menu.tags", 
+        "command": "open-tags-preferences" 
+      },
+      { 
+        "label": "menu.custom_css", 
+        "command": "open-custom-css" 
+      },
+      {
+        "command": "show-stats",
+        "content": "{}",
+        "label": "toolbar.stats"
+    }
   ]},
   "help": {
     "label": "menu.labels.help",

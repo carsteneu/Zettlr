@@ -590,7 +590,8 @@ class ZettlrBody {
   displayStats (data) {
     if (this._currentDialog !== null) return // Only one dialog at a time
     if (this._currentPopup) this._currentPopup.close(true) // Prevent multiple instances
-    let context = {
+    /** not neccessary
+     * let context = {
       'displaySum': (data.sumMonth > 99999) ? '>100k' : localiseNumber(data.sumMonth),
       'avgMonth': localiseNumber(data.avgMonth),
       'today': localiseNumber(data.today),
@@ -600,7 +601,8 @@ class ZettlrBody {
     }
     let cnt = makeTemplate('popup', 'stats', context)
     this._currentPopup = popup($('#toolbar .stats'), cnt)
-    $('#more-stats').on('click', (e) => {
+    **/
+    //$('#more-stats').on('click', (e) => {
       // Theres no form but the user has clicked the more button
       this._currentDialog = new StatsDialog()
       this._currentDialog.init(data.wordCount).open()
@@ -609,7 +611,7 @@ class ZettlrBody {
       // want to click twice to continue writing.
       this._currentPopup.close()
       this._currentPopup = null
-    })
+    //})
   }
 
   /**

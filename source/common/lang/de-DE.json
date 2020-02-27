@@ -471,6 +471,7 @@
         "italic": "Kursiv",
         "labels": {
             "debug": "Entwickler",
+            "settings": "Einstellungen",
             "edit": "Bearbeiten",
             "file": "Datei",
             "help": "Hilfe",

@@ -192,6 +192,8 @@ class ZettlrMenu {
     mainMenu.push(this._buildFromSource(this._blueprint.view))
     if (process.platform === 'darwin') mainMenu.push(this._buildFromSource(this._blueprint.window))
     if (global.config.get('debug')) mainMenu.push(this._buildFromSource(this._blueprint.debug))
+
+    mainMenu.push(this._buildFromSource(this._blueprint.settings))
     mainMenu.push(this._buildFromSource(this._blueprint.help))
 
     // Last but not least add the Quit item (either app menu or file, always the first submenu)

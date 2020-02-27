@@ -392,6 +392,7 @@
         "empty_dir": "Empty directory",
         "empty_directories": "No open files or folders",
         "file_chars": "characters",
+        "file_chars_count": "%s characters",
         "file_chars_sel": "characters (selection)",
         "file_chars_wo_spaces": "characters (w/o spaces)",
         "file_words": "words",
@@ -471,6 +472,7 @@
         "italic": "Italic",
         "labels": {
             "debug": "Develop",
+            "settings": "Settings",
             "edit": "Edit",
             "file": "File",
             "help": "Help",

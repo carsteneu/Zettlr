@@ -473,6 +473,10 @@ class ZettlrRendererIPC {
       case 'open-custom-css':
         this._app.getBody().displayCustomCss()
         break
+        
+      case 'more-stats':
+        this-this._app.getBody().displayMoreStats()
+        break
 
       case 'preferences':
         this._app.getBody().displayPreferences(cnt)
