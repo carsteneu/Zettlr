@@ -447,6 +447,8 @@
         "donate": "Unterst\u00fctzen",
         "duplicate_file": "Datei duplizieren",
         "export": "Exportieren\u2026",
+        "exporthtml": "Export als HTML",
+        "exportpdf": "Export als PDF",
         "find_dir": "In Verzeichnis finden",
         "find_file": "In Datei finden",
         "generate_id": "Neue ID generieren",
@@ -472,6 +474,7 @@
         "labels": {
             "debug": "Entwickler",
             "settings": "Einstellungen",
+            "export": "Export",
             "edit": "Bearbeiten",
             "file": "Datei",
             "help": "Hilfe",

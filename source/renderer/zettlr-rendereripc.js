@@ -20,6 +20,10 @@ const { trans } = require('../common/lang/i18n.js')
 const { clipboard } = require('electron')
 const ipc = require('electron').ipcRenderer
 
+// Include helpers
+const path = require('path')
+const hash = require('../common/util/hash')
+
 // The following commands are sent from the renderer and can potentially close
 // the current file. In that case we have to save the file first and then send
 // the actual command.
@@ -243,6 +247,9 @@ class ZettlrRendererIPC {
   * @deprecated Will be moved to Renderer-IPC in another version
   */
   handleEvent (cmd, cnt) {
+    let ext     = ""
+    let hashdat = ""
+
     switch (cmd) {
       // The main process can request the renderer to retrieve another file
       case 'file-get':
@@ -287,10 +294,15 @@ class ZettlrRendererIPC {
         break
 
       case 'export-html':
-        console.log("export html")
-        let hash = "1158650919"
-        let ext = "html"
-        global.ipc.send('export', { 'hash': hash, 'ext': ext })
+        hashdat = hash(this._app.getCurrentFile().path)
+        ext = "html"
+        global.ipc.send('export', { 'hash': hashdat, 'ext': ext })
+      break
+
+      case 'export-pdf':
+        hashdat = hash(this._app.getCurrentFile().path)
+        ext = "pdf"
+        global.ipc.send('export', { 'hash': hashdat, 'ext': ext })
       break
 
       case 'paths-update':

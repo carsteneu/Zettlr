@@ -212,6 +212,18 @@
         "label": "copy_html"
       }
   ]},
+  "export": {
+    "label": "menu.labels.export",
+    "submenu": [
+      {
+      "label": "menu.exporthtml",
+      "command": "export-html"
+      },
+      {
+        "label": "menu.exportpdf",
+        "command": "export-pdf"
+        }
+  ]},
   "help": {
     "label": "menu.labels.help",
     "role": "help",
