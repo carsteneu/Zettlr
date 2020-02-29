@@ -517,7 +517,7 @@
         "start_speaking": "Start speaking",
         "stop_speaking": "Stop speaking",
         "strikethrough": "Strikethrough",
-        "tags": "Manage Tags\u2026",
+        "tags": "Manage Tags",
         "text_format": "text formatting",
         "toggle_attachments": "View attachments",
         "toggle_devtools": "Toggle developer tools",
@@ -641,7 +641,7 @@
         "show_menu": "Show application menu",
         "show_toc": "Show the table of contents",
         "stats": "View stats",
-        "tag_cloud": "Tags",
+        "tag_cloud": "Show tagcloud",
         "toggle_attachments": "View attachments"
     },
     "validation": {

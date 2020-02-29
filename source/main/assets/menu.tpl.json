@@ -192,6 +192,10 @@
         "label": "menu.tags", 
         "command": "open-tags-preferences" 
       },
+      {
+        "command": "show-tag-cloud",
+        "label": "toolbar.tag_cloud"
+      },
       { 
         "label": "menu.custom_css", 
         "command": "open-custom-css" 

@@ -1,13 +1,6 @@
 {
     "toolbar": [
         {
-          "role": "button",
-          "class": "tag-cloud",
-          "command": "show-tag-cloud",
-          "content": "{}",
-          "title": "toolbar.tag_cloud"
-        },
-        {
             "role": "searchbar"
         },
         {

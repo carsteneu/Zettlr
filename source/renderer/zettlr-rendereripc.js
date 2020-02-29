@@ -286,6 +286,10 @@ class ZettlrRendererIPC {
         this.send('open-quicklook', cnt)
         break
 
+      case 'export-html':
+        global.ipc.send('export', { 'hash': hash, 'ext': ext })
+      break
+      
       case 'paths-update':
         // Update the paths
         this._app.refresh(cnt)
@@ -473,7 +477,7 @@ class ZettlrRendererIPC {
       case 'open-custom-css':
         this._app.getBody().displayCustomCss()
         break
-        
+
       case 'more-stats':
         this-this._app.getBody().displayMoreStats()
         break

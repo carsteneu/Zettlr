@@ -516,7 +516,7 @@
         "start_speaking": "Sprechen beginnen",
         "stop_speaking": "Sprechen anhalten",
         "strikethrough": "Durchstreichen",
-        "tags": "Schlagw\u00f6rter\u2026",
+        "tags": "Schlagw\u00f6rter erstellen",
         "text_format": "Textformatierung",
         "toggle_attachments": "Anh\u00e4nge anzeigen",
         "toggle_devtools": "Entwicklerwerkzeuge",
@@ -640,7 +640,7 @@
         "show_menu": "Men\u00fc anzeigen",
         "show_toc": "Inhaltsverzeichnis anzeigen",
         "stats": "Statistiken anzeigen",
-        "tag_cloud": "Schlagworte",
+        "tag_cloud": "Schlagworte / Tagcloud anzeigen",
         "toggle_attachments": "Anh\u00e4nge anzeigen"
     },
     "validation": {
