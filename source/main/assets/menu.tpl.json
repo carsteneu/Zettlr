@@ -22,7 +22,7 @@
     },{
       "label": "menu.new_dir",
       "accelerator": "CmdOrCtrl+Shift+N",
-      "command": "dir-new"
+      "command": "dir-open"
     },
     { "type": "separator" },
     {
