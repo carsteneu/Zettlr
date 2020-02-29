@@ -204,7 +204,13 @@
         "command": "show-stats",
         "content": "{}",
         "label": "toolbar.stats"
-    }
+      }
+      ,
+      {
+        "command": "export-html",
+        "content": "{}",
+        "label": "copy_html"
+      }
   ]},
   "help": {
     "label": "menu.labels.help",

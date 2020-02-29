@@ -287,9 +287,12 @@ class ZettlrRendererIPC {
         break
 
       case 'export-html':
+        console.log("export html")
+        let hash = "1158650919"
+        let ext = "html"
         global.ipc.send('export', { 'hash': hash, 'ext': ext })
       break
-      
+
       case 'paths-update':
         // Update the paths
         this._app.refresh(cnt)

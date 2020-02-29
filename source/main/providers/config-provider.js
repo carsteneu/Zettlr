@@ -55,6 +55,7 @@ class ConfigProvider extends EventEmitter {
     this._rules = [] // This array holds all validation rules
 
     this._bulkSetInProgress = false // As long as this is true, a bulk set happens
+    let pdfexport_engine="pdf-engine"
 
     // Additional environmental paths (for locating LaTeX and Pandoc)
     switch (process.platform) {
@@ -63,6 +64,7 @@ class ConfigProvider extends EventEmitter {
         break
       case 'linux':
         this._additional_paths = COMMON_DATA.additional_paths.linux
+        pdfexport_engine="latex-engine"
         break
       case 'darwin':
         this._additional_paths = COMMON_DATA.additional_paths.macos
