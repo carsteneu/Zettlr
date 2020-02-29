@@ -604,7 +604,7 @@
         "no_command": "Nachricht ohne Befehl erhalten: %s",
         "ok": "Ok",
         "open_folder": "Projektverzeichnis \u00f6ffnen",
-        "open_root_directory": "\u00d6ffne Verzeichnis %s \u2026",
+        "open_root_directory": "\u00d6ffne / Erstelle Projektverzeichnis \u2026",
         "open_root_directory_success": "Verzeichnis %s wurde geladen.",
         "overwrite_file_message": "Die Date %s existiert bereits in diesem Verzeichnis. \u00dcberschreiben?",
         "overwrite_file_title": "Datei \u00fcberschreiben",
