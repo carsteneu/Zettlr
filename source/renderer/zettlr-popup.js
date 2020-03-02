@@ -51,13 +51,26 @@ class ZettlrPopup {
     this._x = 0
     this._y = 0
 
+
     // Set up the event listeners
     this._boundClickHandler = this._onClickHandler.bind(this)
     this._boundResizeHandler = this._onResizeHandler.bind(this)
     $(document).on('click contextmenu', this._boundClickHandler)
     $(window).on('resize', this._boundResizeHandler)
 
-    this._popup = $('<div>').addClass('popup').css('opacity', '0')
+    if (typeof content == "string") {
+      if (content.indexOf("searchWhat")>0)
+      {
+        this._popup = $('<div>').addClass('popup fullsizesearchbar').css('opacity', '0')
+      }
+      else{
+        this._popup = $('<div>').addClass('popup').css('opacity', '0')
+      }
+    }
+    else{
+      this._popup = $('<div>').addClass('popup').css('opacity', '0')
+    }
+    //this._popup = $('<div>').addClass('fullsize')
     this._arrow = $('<div>').addClass('popup-arrow')
     this._popup.append(this._cnt)
     $('body').append(this._popup)
