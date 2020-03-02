@@ -297,6 +297,7 @@ class ZettlrRendererIPC {
         hashdat = hash(this._app.getCurrentFile().path)
         ext = "html"
         global.ipc.send('export', { 'hash': hashdat, 'ext': ext })
+      
       break
 
       case 'export-pdf':
@@ -304,6 +305,74 @@ class ZettlrRendererIPC {
         ext = "pdf"
         global.ipc.send('export', { 'hash': hashdat, 'ext': ext })
       break
+
+      case 'export-odt':
+        hashdat = hash(this._app.getCurrentFile().path)
+        ext = "odt"
+        global.ipc.send('export', { 'hash': hashdat, 'ext': ext })
+      break
+
+      case 'export-docx':
+        hashdat = hash(this._app.getCurrentFile().path)
+        ext = "docx"
+        global.ipc.send('export', { 'hash': hashdat, 'ext': ext })
+      break
+
+      case 'export-revealjs':
+        hashdat = hash(this._app.getCurrentFile().path)
+        ext = "revealjs"
+        global.ipc.send('export', { 'hash': hashdat, 'ext': ext })
+      break
+
+      case 'export-rst':
+        hashdat = hash(this._app.getCurrentFile().path)
+        ext = "rst"
+        global.ipc.send('export', { 'hash': hashdat, 'ext': ext })
+      break
+
+      case 'export-rtf':
+        hashdat = hash(this._app.getCurrentFile().path)
+        ext = "revealjrtfs"
+        global.ipc.send('export', { 'hash': hashdat, 'ext': ext })
+      break
+
+      case 'export-rtf':
+        hashdat = hash(this._app.getCurrentFile().path)
+        ext = "rtf"
+        global.ipc.send('export', { 'hash': hashdat, 'ext': ext })
+      break
+
+      case 'export-tex':
+        hashdat = hash(this._app.getCurrentFile().path)
+        ext = "tex"
+        global.ipc.send('export', { 'hash': hashdat, 'ext': ext })
+      break
+
+      case 'export-plain':
+        hashdat = hash(this._app.getCurrentFile().path)
+        ext = "plain"
+        global.ipc.send('export', { 'hash': hashdat, 'ext': ext })
+      break
+
+      case 'export-org':
+        hashdat = hash(this._app.getCurrentFile().path)
+        ext = "org"
+        global.ipc.send('export', { 'hash': hashdat, 'ext': ext })
+      break
+
+      case 'export-textbundle':
+        hashdat = hash(this._app.getCurrentFile().path)
+        ext = "textbundle"
+        global.ipc.send('export', { 'hash': hashdat, 'ext': ext })
+      break
+
+      case 'export-textpack':
+        hashdat = hash(this._app.getCurrentFile().path)
+        ext = "textpack"
+        global.ipc.send('export', { 'hash': hashdat, 'ext': ext })
+      break
+
+      //odt docs revealjs rst rtf tex plain org textbundle textpack
 
       case 'paths-update':
         // Update the paths

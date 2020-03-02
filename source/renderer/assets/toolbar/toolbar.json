@@ -8,13 +8,6 @@
         },
         {
             "role": "button",
-            "class": "share",
-            "command": "export",
-            "content": "{}",
-            "title": "toolbar.share"
-        },
-        {
-            "role": "button",
             "class": "show-toc",
             "command": "toc",
             "content": "{}",

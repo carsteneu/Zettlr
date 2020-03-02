@@ -226,7 +226,47 @@
       {
         "label": "menu.exportpdf",
         "command": "export-pdf"
-        }
+      },
+      {
+        "label": "menu.exportodt",
+        "command": "export-odt"
+      },
+      {
+        "label": "menu.exportdocx",
+        "command": "export-docx"
+      },
+      {
+        "label": "menu.exportrevealjs",
+        "command": "export-revealjs"
+      },
+      {
+        "label": "menu.exportrst",
+        "command": "export-rst"
+      },
+      {
+        "label": "menu.exportrtf",
+        "command": "export-rtf"
+      },
+      {
+        "label": "menu.exporttex",
+        "command": "export-tex"
+      },
+      {
+        "label": "menu.exportplain",
+        "command": "export-plain"
+      },
+      {
+        "label": "menu.exportorg",
+        "command": "export-org"
+      },
+      {
+        "label": "menu.exporttextbundle",
+        "command": "export-textbundle"
+      },
+      {
+        "label": "menu.exporttextpack",
+        "command": "export-textpack"
+      }
   ]},
   "help": {
     "label": "menu.labels.help",
