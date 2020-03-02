@@ -237,7 +237,40 @@
       },
       {
         "label": "menu.exportrevealjs",
-        "command": "export-revealjs"
+        "submenu": [
+          {
+          "label": "menu.exportrevealjs-black",
+          "command": "export-revealjs-black"
+          },
+          {
+          "label": "menu.exportrevealjs-moon",
+          "command": "export-revealjs-moon"
+          },
+          {
+            "label": "menu.exportrevealjs-league",
+            "command": "export-revealjs-league"
+          },
+          {
+            "label": "menu.exportrevealjs-sky",
+            "command": "export-revealjs-sky"
+          },
+          {
+            "label": "menu.exportrevealjs-beige",
+            "command": "export-revealjs-beige"
+          },
+          {
+            "label": "menu.exportrevealjs-solarized",
+            "command": "export-revealjs-solarized"
+          },
+          {
+            "label": "menu.exportrevealjs-serif",
+            "command": "export-revealjs-serif"
+          },
+          {
+            "label": "menu.exportrevealjs-white",
+            "command": "export-revealjs-white"
+          }
+        ]
       },
       {
         "label": "menu.exportrst",

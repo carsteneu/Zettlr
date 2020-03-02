@@ -318,9 +318,51 @@ class ZettlrRendererIPC {
         global.ipc.send('export', { 'hash': hashdat, 'ext': ext })
       break
 
-      case 'export-revealjs':
+      case 'export-revealjs-black':
         hashdat = hash(this._app.getCurrentFile().path)
-        ext = "revealjs"
+        ext = "revealjs-black"
+        global.ipc.send('export', { 'hash': hashdat, 'ext': ext })
+      break
+
+      case 'export-revealjs-league':
+        hashdat = hash(this._app.getCurrentFile().path)
+        ext = "revealjs-league"
+        global.ipc.send('export', { 'hash': hashdat, 'ext': ext })
+      break
+
+      case 'export-revealjs-moon':
+        hashdat = hash(this._app.getCurrentFile().path)
+        ext = "revealjs-moon"
+        global.ipc.send('export', { 'hash': hashdat, 'ext': ext })
+      break
+
+      case 'export-revealjs-sky':
+        hashdat = hash(this._app.getCurrentFile().path)
+        ext = "revealjs-sky"
+        global.ipc.send('export', { 'hash': hashdat, 'ext': ext })
+      break
+
+      case 'export-revealjs-beige':
+        hashdat = hash(this._app.getCurrentFile().path)
+        ext = "revealjs-beige"
+        global.ipc.send('export', { 'hash': hashdat, 'ext': ext })
+      break
+
+      case 'export-revealjs-solarized':
+        hashdat = hash(this._app.getCurrentFile().path)
+        ext = "revealjs-solarized"
+        global.ipc.send('export', { 'hash': hashdat, 'ext': ext })
+      break
+
+      case 'export-revealjs-white':
+        hashdat = hash(this._app.getCurrentFile().path)
+        ext = "revealjs-white"
+        global.ipc.send('export', { 'hash': hashdat, 'ext': ext })
+      break
+
+      case 'export-revealjs-serif':
+        hashdat = hash(this._app.getCurrentFile().path)
+        ext = "revealjs-serif"
         global.ipc.send('export', { 'hash': hashdat, 'ext': ext })
       break
 
