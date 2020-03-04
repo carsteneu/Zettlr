@@ -14,71 +14,105 @@
  * END HEADER
  */
 
-// First import the Berlin theme, because this mainly changes colours.
-@import "../theme-berlin/theme-main.less";
 
-:root {
+// Import the colour variables
+@import "colours.less";
 
-  // Now adapt
-  --c-primary: var(--blue-0);
-  --c-primary-shade: var(--blue-1);
+// Import the fonts
+@import "../fonts.less";
 
-  --c-secondary: var(--green-0);
-  --c-secondary-shade: var(--green-1);
+// Import the generic theme variables
+@import "theme-vars.less";
 
-  --bg-primary: white;
+body {
+    // First stylesheet-specific geometry (font sizes, paddings)
+    @import "theme-geometry.less";
 
-  // Colours for the directory list
-  --c-virtual-directory: var(--purple-selection);
-  --bg-virtual-directory: lighten(@purple-selection, 10%);
-  --c-virtual-directory-dark: var(--purple-selection-dark);
-  --bg-virtual-directory-dark: lighten(@purple-selection-dark, 10%);
+    // Now the light theming
+    @import "light/main.less";
 
-  --c-project: var(--orange-2);
+    // After here come colours that don't change with light/dark theming.
 
-  // Scrollbar annotations
-  --bg-annotation: var(--orange-2);
-  --bg-annotation-dark: yellow;
+    @import "modal.less";
 
-  --selection-light: var(--blue-selection);
-  --selection-dark: var(--blue-selection-dark);
+    // COMBINER ARROW BUTTON
+    #sidebar #arrow-button {
+        background-color: white;
+        border-radius:100%;
+        box-shadow:1px 1px 10px 0px rgba(0,0,0,.25);
+    }
 
-  /**
-   * ALERTS
-   */
-  --c-alert-success: var(--green-selection);
-  --c-alert-success-shade: var(--green-selection-dark);
+    // Notifications
+    .notify {
+        background-color:rgba(0,0,0,.7);
+        color:white;
+        border-radius:3px;
+    }
 
-  --c-alert-warning: var(--gold-selection);
-  --c-alert-warning-shade: var(--gold-selection-dark);
+    .dragger {
+        // This class is applied to dragged elements
+        font-size: @font-size-small;
+        border-radius:5px;
+        background-color: var(--grey-1);
+        padding:4px;
+        box-shadow:5px 5px 15px 0px rgba(0,0,0,.25);
+    }
 
-  --c-alert-error: var(--bg-error);
-  --c-alert-error-shade: var(--fg-error);
+    // Fixes the non-readable blue colour of the links and prevents them from
+    // breaking out of the container.
+    .tippy-popper {
+      a {
+        color: white;
+        word-wrap: break-word;
+      }
+    }
 
-  /**
-   * POMODORO
-   */
-  --pomodoro-task: var(--orange-2);
-  --pomodoro-short: var(--gold-selection-dark);
-  --pomodoro-long: var(--green-selection-dark);
+    // The table helper injects CSS that we need to override
+    .table-helper-align-button-container,
+    .table-helper-remove-button-container,
+    .table-helper-add-button {
+      color: var(--c-primary);
+      background-color: var(--grey-2); // Make it more visible
+    }
 
-  // Necessary for the heatmap colours, 204 corresponds to @blue-0
-  --search-hue: 204;
+    .table-helper-align-button-line {
+      background-color: var(--c-primary);
+    }
+
+    .table-helper-remove-button-line { background-color: black; }
+
+    table.table-helper td:focus {
+      outline-color: var(--c-primary);
+    }
+
+    .taglist .tagspacer:only-child .tag { border:2px solid white; }
+
+    // Fallback for all systems not identified as win32, darwin, or linux.
+    font-family: @font-main;
+
+    &.win32 {
+        // Lato on Windows looks bad b/c of very strange font antialiasing,
+        // therefore we have to use Segoe UI, if available.
+        font-family: @font-main-win;
+    }
+
+    &.darwin, &.linux {
+        // Use built-in Lato for other systems.
+        font-family: @font-main;
+    }
+
+    // The loading spinner colours
+    .sk-three-bounce .sk-child { background-color: var(--c-primary); }
+
 }
 
-@c-primary: @blue-0;
-@c-primary-shade: @blue-1;
+// DARK STYLES
+body.dark {
+    @import "dark/main.less";
 
-/**
- * Change editor font only.
- */
-#editor .CodeMirror {
-  font-family: @font-crimson;
-  font-size: 1.5em;
-}
-
-// Exchange the colour of the preview image in the display settings to accomodate
-// for the primary colour of this theme.
-.modal .dialog div.image-size .image {
-  filter: hue-rotate(64deg) saturate(84%) contrast(149%) brightness(90%);
+    .table-helper-align-button-container,
+    .table-helper-remove-button-container,
+    .table-helper-add-button {
+      background-color: white;
+    }
 }

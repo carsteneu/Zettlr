@@ -57,7 +57,7 @@ class ZettlrQuicklookWindow {
     // Also we need to know whether or not we should initiate in darkMode, and
     // which theme to use initially.
     if (url.searchParams.get('darkMode') === 'true') $('body').addClass('dark')
-    $('link#theme-css').attr('href', $('link#theme-css').attr('href').replace(/bielefeld|berlin|frankfurt|karl-marx-stadt/, this._theme))
+    $('link#theme-css').attr('href', $('link#theme-css').attr('href').replace(/bielefeld|berlin|frankfurt|karl-marx-stadt|bonn/, this._theme))
 
     ipc.on('custom-css', (evt, cnt) => {
       $('#custom-css-link').detach() // Remove any prior link
@@ -81,7 +81,7 @@ class ZettlrQuicklookWindow {
         this._theme = config.display.theme
         $('link#theme-css').attr(
           'href',
-          $('link#theme-css').attr('href').replace(/bielefeld|berlin|frankfurt|karl-marx-stadt/, this._theme)
+          $('link#theme-css').attr('href').replace(/bielefeld|berlin|frankfurt|karl-marx-stadt|bonn/, this._theme)
         )
       }
 

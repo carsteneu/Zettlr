@@ -13,32 +13,25 @@
     <link rel="stylesheet" href="../../node_modules/katex/dist/katex.min.css">
     <!-- Generated CSS output for the vue components -->
     <link rel="stylesheet" href="./vue/sidebar.css">
-
     <!-- Include the geometry of the app -->
     <link rel="stylesheet" href="../../common/assets/css/geometry.css">
-
     <!-- Include the main theme -->
-    <link rel="stylesheet" id="theme-css" href="../../common/assets/css/theme-berlin.css">
+    <link rel="stylesheet" id="theme-css" href="../../common/assets/css/theme-bonn.css">
 
     <!-- And now the JS -->
     <!-- Hack for recognizing jquery (thanks to https://stackoverflow.com/a/37480521/8651046)-->
     <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
-
     <script type="text/javascript" src="../../node_modules/jquery/dist/jquery.js"></script>
     <script type="text/javascript" src="../../common/assets/js/jquery-ui.min.js"></script>
-
     <!-- Hack for jQuery (part 2) -->
     <script>if (window.module) module = window.module;</script>
-
     <!-- Finally load the app. It will load automatically. -->
     <script type="text/javascript" src="../main.js"></script>
 </head>
 <body>
     <div id="container">
-        
         <!-- Mount the Sidebar -->
         <div id="sidebar"></div>
-
         <!-- Three: The editor itself -->
         <div id="editor">
             <textarea id="cm-text" style="display:none;" placeholder=""></textarea>
