@@ -72,9 +72,10 @@ class ZettlrPopup {
     }
     //this._popup = $('<div>').addClass('fullsize')
     this._arrow = $('<div>').addClass('popup-arrow')
+    console.log(this._cnt)
     this._popup.append(this._cnt)
-    $('body').append(this._popup)
-    $('body').append(this._arrow)
+    $('.CodeMirror-sizer').prepend(this._popup)
+    //$('body').append(this._arrow)
 
     // Activate forms
     this._popup.find('form').on('submit', (e) => {

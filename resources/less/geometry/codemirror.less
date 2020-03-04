@@ -30,7 +30,12 @@
   // This directive prevents strange colour artifacts when a document is open
   // that has less lines of code than fit into the window (especially notable
   // in dark mode, as the sizer is visible with a small green halo).
-  .CodeMirror-sizer { height: 100%; }
+  .CodeMirror-sizer {
+     height: 100%; 
+     margin:0 auto !important;
+     width:85%  !important;
+    max-width:1200px  !important;
+    }
 
   &.CodeMirror-empty {
     // If the editor is empty, display a nice background image

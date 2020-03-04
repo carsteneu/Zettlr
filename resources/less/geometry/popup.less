@@ -330,6 +330,8 @@
     }
   }
 
+
+
   // SEARCH POPUP
   .search {
     .row { display: flex; }
@@ -338,10 +340,10 @@
       * 6 4
       * 6 3 1
       */
-      font-size:100%;
+      font-size:80%;
       flex: 0 6 auto; // 60 percent width -- set first param to 0 for alignment
       text-align:left;
-      width:60%;
+      width:80%;
       background-color: transparent;
       color:inherit;
       padding:5px;
@@ -361,6 +363,8 @@
       border-radius:2px;
       overflow:hidden;
       outline: 0;
+      text-align: left;
+      padding-left: 10px;
 
       &#searchNext { flex: 4 4 auto; } // 40 percent width
       &#replaceNext { flex: 3 3 auto; } // 30 percent width
@@ -416,4 +420,13 @@
       margin: 0 auto;
     }
   }
+}
+
+//fullsizesearchbar
+.fullsizesearchbar {
+  width:90% !important;
+  max-width:800px !important;
+  top:0px !important;
+  left:auto !important;
+  z-index:9999;
 }
