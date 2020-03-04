@@ -209,12 +209,6 @@
         "content": "{}",
         "label": "toolbar.stats"
       }
-      ,
-      {
-        "command": "export-html",
-        "content": "{}",
-        "label": "copy_html"
-      }
   ]},
   "export": {
     "label": "menu.labels.export",

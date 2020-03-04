@@ -159,7 +159,7 @@ class ZettlrMenu {
               i++
               builtItem.submenu.push({
                 'label': recent.name,
-                'accelerator': (i === 10) ? 'CmdOrCtrl+0' : `CmdOrCtrl+${i}`,
+               // 'accelerator': (i === 10) ? 'CmdOrCtrl+0' : `CmdOrCtrl+${i}`,
                 'click': function (menuitem, focusedWindow) {
                   if (global.mainWindow) {
                     global.mainWindow.webContents.send('message', { 'command': 'file-get', 'content': recent.hash })

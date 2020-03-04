@@ -6,16 +6,17 @@
         {
             "role": "spacer"
         },
+
+        {
+            "role": "file-info",
+            "title": "toolbar.file_info"
+        },
         {
             "role": "button",
             "class": "show-toc",
             "command": "toc",
             "content": "{}",
             "title": "toolbar.show_toc"
-        },
-        {
-            "role": "file-info",
-            "title": "toolbar.file_info"
         },
         {
             "role": "pomodoro",
